@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <style>
+    .mark { fill: #111111; }
+    .ring { fill: none; stroke: #111111; stroke-width: 4; }
+    @media (prefers-color-scheme: dark) {
+      .mark { fill: #FCFAF7; }
+      .ring { stroke: #FCFAF7; }
+    }
+  </style>
+  <!-- thin circle (left) -->
+  <circle class="ring" cx="205" cy="262" r="120"/>
+  <!-- thin left diagonal of the A -->
+  <path class="mark" d="M296 118 L300 138 L196 452 L172 452 Z"/>
+  <!-- A crossbar -->
+  <path class="mark" d="M214 356 L360 356 L360 376 L208 376 Z"/>
+  <!-- thick right stem sweeping down into a C-curl (the dominant mass) -->
+  <path class="mark" d="
+    M300 118
+    L360 118
+    L360 300
+    Q360 470 300 512
+    Q404 512 448 452
+    L410 430
+    Q384 470 360 470
+    Q332 470 332 396
+    L332 118
+    Z"/>
+  <!-- F top bar -->
+  <path class="mark" d="M330 120 L474 120 L474 140 L330 140 Z"/>
+  <!-- F middle bar -->
+  <path class="mark" d="M330 250 L446 250 L446 268 L330 268 Z"/>
+</svg>
