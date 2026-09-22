@@ -1018,9 +1018,37 @@ section { padding-top: var(--section); padding-bottom: var(--section); }
     color: #555;
 }
 
+/* Trustpilot — compact variant inside the dark hero */
+.trustpilot-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    background: rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.trustpilot-hero:hover { background: rgba(0,0,0,0.4); transform: translateY(-1px); }
+.trustpilot-hero .tp-stars { display: inline-flex; gap: 2px; }
+.trustpilot-hero .tp-star { width: 20px; height: 20px; display: block; }
+.tph-meta {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+}
+.tph-meta strong { font-weight: 700; }
+.trustpilot-hero .tp-name { color: #4ce0ac; font-weight: 600; }
+
 @media (max-width: 700px) {
     .trustpilot { padding: 16px 20px; }
     .tp-star { width: 26px; height: 26px; }
+    .trustpilot-hero { flex-wrap: wrap; justify-content: center; }
+    .trustpilot-hero .tp-star { width: 18px; height: 18px; }
+    .tph-meta { font-size: 12.5px; }
 }
 
 /* -------------------------------------------------
