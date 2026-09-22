@@ -923,6 +923,107 @@ section { padding-top: var(--section); padding-bottom: var(--section); }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
 /* -------------------------------------------------
+   TRUSTPILOT badge (real rating, links to reviews)
+   ------------------------------------------------- */
+.trustpilot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 0 auto 44px;
+    padding: 18px 28px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.trustpilot:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
+.tp-head {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: var(--brown-deep);
+}
+.tp-stars { display: inline-flex; gap: 3px; }
+.tp-star { width: 30px; height: 30px; display: block; }
+.tp-meta { font-size: 14px; color: var(--text-soft); }
+.tp-meta strong { color: var(--brown-deep); font-weight: 600; }
+.tp-name { color: #00b67a; font-weight: 600; }
+
+/* -------------------------------------------------
+   QUALIOPI badge (footer)
+   ------------------------------------------------- */
+.qualiopi {
+    display: block;
+    margin-top: 22px;
+    padding: 14px 16px 12px;
+    background: #ffffff;
+    border-radius: 10px;
+    max-width: 260px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    transition: transform 0.2s ease;
+}
+.qualiopi:hover { transform: translateY(-2px); }
+.q-logo { display: flex; align-items: center; gap: 12px; }
+.q-word { display: flex; flex-direction: column; line-height: 1; }
+.q-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    color: #2b2d7c;
+}
+.q-sub {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: #2b2d7c;
+    margin-top: 3px;
+}
+.q-mark { width: 40px; height: 40px; flex: 0 0 auto; margin-left: auto; }
+.q-rf {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e6e6ef;
+}
+.q-flag {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 15px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #000091 0 33.33%, #ffffff 33.33% 66.66%, #e1000f 66.66% 100%);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+}
+.q-rf-txt {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 10.5px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    color: #000091;
+}
+.q-mention {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--font-sans);
+    font-size: 9px;
+    line-height: 1.35;
+    color: #555;
+}
+
+@media (max-width: 700px) {
+    .trustpilot { padding: 16px 20px; }
+    .tp-star { width: 26px; height: 26px; }
+}
+
+/* -------------------------------------------------
    LEGAL PAGES — mentions légales & CGV
    ------------------------------------------------- */
 .legal-hero {
